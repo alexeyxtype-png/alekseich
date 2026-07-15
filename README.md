@@ -1,13 +1,19 @@
-# АЛЕКСЕИЧ — V20 Mobile Fix
+# BURLOV 1.0
 
-Исправления мобильной версии:
-- полноэкранное адаптивное меню;
-- отсутствие наложений заголовков и описаний;
-- отдельная вертикальная композиция About и Selected Work;
-- монтажные переходы отключены на мобильных и заменены плавным скроллом;
-- десктопная версия и её анимации сохранены.
+Финальный identity-pass сайта BURLOV.
 
-## V21 mobile refinements
-- Compact blurred navigation panel on mobile.
-- Reduced navigation typography and cleaner arrow controls.
-- Mobile About heading now wraps safely without clipping.
+## Главное
+- единый визуальный логотип, который переходит из Hero в Header;
+- cinematic focus при первом открытии;
+- двойной клик по BURLOV показывает `CREATIVE DIRECTION`;
+- лёгкое dolly-ощущение при скролле;
+- единая типографическая и motion-система;
+- журнальная подача кейсов;
+- последовательная география проектов без линий.
+
+Откройте `index.html` через локальный сервер.
+
+
+## Final touch
+- Commercial email: alexeyxtype.commercial@gmail.com
+- Enlarged header BURLOV wordmark on desktop and mobile.

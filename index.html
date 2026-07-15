@@ -3,147 +3,36 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="АЛЕКСЕИЧ — видеопродюсер. Монтаж, полный цикл производства и AI-контент.">
+  <meta name="description" content="BURLOV — видеопродюсер. Монтаж, полный цикл производства и AI-контент.">
   <meta name="theme-color" content="#050505">
-  <title>АЛЕКСЕИЧ — Video Producer</title>
+  <title>BURLOV — видеопродюсер</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Roboto+Condensed:wght@700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;600;700;800;900&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body class="is-loading">
-  <div class="preloader edit-preloader" id="preloader" role="status" aria-label="Загрузка сайта">
-    <div class="preloader-noise" aria-hidden="true"></div>
-    <div class="edit-ui" aria-hidden="true">
-      <div class="edit-topbar">
-        <span>ALEKSEICH_PROJECT</span>
-        <span>ASSEMBLY_01</span>
-        <span class="preloader-count">00%</span>
-      </div>
-
-      <div class="edit-workspace">
-        <div class="edit-sidebar">
-          <div class="edit-tab active">PROJECT</div>
-          <div class="edit-bin-title">MEDIA</div>
-          <div class="edit-bin-item"><i></i><span>showreel.mp4</span></div>
-          <div class="edit-bin-item"><i></i><span>brand.aep</span></div>
-          <div class="edit-bin-item"><i></i><span>sound.wav</span></div>
-        </div>
-
-        <div class="edit-preview">
-          <div class="preview-toolbar"><span>PROGRAM: ALEKSEICH</span><b>FIT</b></div>
-          <div class="preview-screen">
-            <div class="preview-safe"></div>
-            <div class="preview-brand" data-text="АЛЕКСЕИЧ">АЛЕКСЕИЧ</div>
-            <div class="preview-sub">VIDEO PRODUCER / EDITOR</div>
-          </div>
-          <div class="preview-controls">
-            <span>◀</span><span>▶</span><span>▶▶</span>
-            <time class="edit-timecode">00:00:00:00</time>
-          </div>
-        </div>
-      </div>
-
-      <div class="edit-timeline-wrap">
-        <div class="timeline-toolbar">
-          <span>SEQUENCE 01</span>
-          <span class="timeline-status">RENDERING PREVIEW</span>
-        </div>
-        <div class="edit-timeline">
-          <div class="timeline-ruler">
-            <span>00:00</span><span>00:02</span><span>00:04</span><span>00:06</span><span>00:08</span><span>00:10</span>
-          </div>
-          <div class="track-labels">
-            <span>V2</span><span>V1</span><span>A1</span>
-          </div>
-          <div class="track-area">
-            <div class="track-row track-v2">
-              <i class="clip clip-title">ALEKSEICH.TITLE</i>
-              <i class="clip clip-glitch">GLITCH_ADJ</i>
-            </div>
-            <div class="track-row track-v1">
-              <i class="clip clip-video">SHOWREEL_2026</i>
-            </div>
-            <div class="track-row track-a1">
-              <i class="clip clip-audio">MASTER_AUDIO</i>
-            </div>
-            <div class="playhead"><b></b></div>
-            <div class="timeline-progress"></div>
-          </div>
-        </div>
-      </div>
-    </div>
+  <div class="preloader minimal-preloader" id="preloader" role="status" aria-label="Открытие сайта BURLOV">
+    <div class="minimal-loader-brand" aria-hidden="true">BURLOV</div>
   </div>
-  <div class="editor-transition" id="editorTransition" aria-hidden="true">
-    <div class="editor-transition-noise"></div>
-    <div class="transition-editor-ui">
-      <div class="transition-topbar">
-        <span>ALEKSEICH_PROJECT</span>
-        <span class="transition-sequence-name">SEQUENCE / HOME</span>
-        <span class="transition-state">CUTTING</span>
-      </div>
-      <div class="transition-workspace">
-        <aside class="transition-project-bin">
-          <span class="transition-panel-title">PROJECT</span>
-          <div class="transition-bin-item active"><i></i><span>WEBSITE_MASTER</span></div>
-          <div class="transition-bin-item"><i></i><span>SHOWREEL_2026</span></div>
-          <div class="transition-bin-item"><i></i><span>BRAND_GRAPHICS</span></div>
-        </aside>
-        <div class="transition-program">
-          <div class="transition-program-toolbar"><span>PROGRAM: WEBSITE_MASTER</span><b>FIT</b></div>
-          <div class="transition-preview-screen" id="transitionPreview">
-            <div class="transition-preview-grid"></div>
-            <div class="transition-preview-label">PROGRAM MONITOR</div>
-          </div>
-          <div class="transition-program-controls">
-            <span>◀</span><span>▶</span><span>▶▶</span>
-            <time class="transition-timecode">00:00:00:00</time>
-          </div>
-        </div>
-      </div>
-      <div class="transition-timeline-panel">
-        <div class="transition-timeline-toolbar"><span>WEBSITE_MASTER</span><span class="transition-target-label">HOME → WORK</span></div>
-        <div class="transition-timeline">
-          <div class="transition-track-labels"><span>V2</span><span>V1</span><span>A1</span></div>
-          <div class="transition-tracks">
-            <div class="transition-ruler"><span>00:00</span><span>00:04</span><span>00:08</span><span>00:12</span><span>00:16</span><span>00:20</span></div>
-            <div class="transition-track-row v2">
-              <i class="transition-clip title-clip" style="--left:2%;--width:18%">HOME.TITLE</i>
-              <i class="transition-clip title-clip" style="--left:22%;--width:18%">WORK.TITLE</i>
-              <i class="transition-clip title-clip" style="--left:42%;--width:18%">MAP.TITLE</i>
-              <i class="transition-clip title-clip" style="--left:62%;--width:17%">ABOUT.TITLE</i>
-              <i class="transition-clip title-clip" style="--left:81%;--width:17%">CONTACT.TITLE</i>
-            </div>
-            <div class="transition-track-row v1">
-              <i class="transition-clip video-clip" style="--left:1%;--width:19%">HERO_SCENE</i>
-              <i class="transition-clip video-clip" style="--left:21%;--width:19%">SELECTED_WORK</i>
-              <i class="transition-clip video-clip" style="--left:41%;--width:19%">WORLD_MAP</i>
-              <i class="transition-clip video-clip" style="--left:61%;--width:19%">ABOUT_SCENE</i>
-              <i class="transition-clip video-clip" style="--left:81%;--width:18%">CONTACT_SCENE</i>
-            </div>
-            <div class="transition-track-row a1"><i class="transition-clip audio-clip" style="--left:0%;--width:100%">MASTER_AUDIO</i></div>
-            <div class="transition-playhead"><b></b></div>
-            <div class="transition-timeline-glow"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+  <div class="brand-transition" id="brandTransition" aria-hidden="true"><span>BURLOV</span></div>
 
   <div class="scroll-progress" aria-hidden="true"></div>
   <div class="cursor-dot" aria-hidden="true"></div>
   <div class="cursor-ring" aria-hidden="true"><span>OPEN</span></div>
 
   <header class="header">
-    <a class="logo" href="#top">АЛЕКСЕИЧ</a>
+    <a class="logo brand-lockup brand-target" href="#top" aria-label="BURLOV — наверх"><span class="logo-word">BURLOV</span></a>
     <button class="menu-button" aria-label="Открыть меню" aria-expanded="false"><i></i><i></i></button>
     <nav class="nav">
-      <a href="#work">WORK</a>
-      <a href="#map">MAP</a>
-      <a href="#about">ABOUT</a>
-      <a href="#contact">CONTACT</a>
+      <a href="#work">РАБОТЫ</a>
+      <a href="#map">ГЕОГРАФИЯ</a>
+      <a href="#about">ОБО МНЕ</a>
+      <a href="#contact">КОНТАКТЫ</a>
     </nav>
   </header>
+
+  <button class="morph-brand" id="morphBrand" type="button" aria-label="BURLOV"><span>BURLOV</span><small>CREATIVE DIRECTION</small></button>
 
   <main id="top">
     <section class="hero" data-color-reveal>
@@ -152,87 +41,85 @@
         <video class="hero-video hero-video-color" src="assets/videos/showreel.mp4" autoplay muted loop playsinline preload="metadata"></video>
         <div class="hero-shade"></div>
       </div>
-      <div class="hero-grid" aria-hidden="true"></div>
       <div class="hero-top reveal">
-        <span>VIDEO PRODUCER / EDITOR</span>
-        <span>RUSSIA · WORLDWIDE</span>
+        <span>СТУДИЯ КРЕАТИВНОГО ПРОДЮСИРОВАНИЯ</span>
+        <span>МЕЖДУНАРОДНОЕ ПРОИЗВОДСТВО КОНТЕНТА</span>
       </div>
 
-      <div class="brand-stage" aria-label="АЛЕКСЕИЧ">
-        <div class="brand-word" data-brand>АЛЕКСЕИЧ</div>
-        <div class="brand-outline" aria-hidden="true">АЛЕКСЕИЧ</div>
+      <div class="brand-stage brand-source" aria-hidden="true">
+        <div class="brand-word" data-brand><span>B</span><span>U</span><span>R</span><span>L</span><span>O</span><span>V</span></div>
       </div>
 
       <div class="hero-bottom reveal">
-        <p>Создаю видео полного цикла для бизнеса, брендов и государственных проектов.</p>
-        <div class="hero-tags"><span>PRODUCTION</span><span>EDITING</span><span>AI CONTENT</span></div>
+        <p class="hero-statement"><span>КОНТЕНТ,</span><span>КОТОРЫЙ ПРОДАЁТ.</span></p>
+        <div class="hero-tags"><span>ПРОДАКШН</span><span>ПРОДЮСИРОВАНИЕ</span><span>AI-КОНТЕНТ</span></div>
         <div class="hero-actions">
           <button class="hero-reel open-video" data-video="assets/videos/showreel.mp4" data-title="Showreel">СМОТРЕТЬ ШОУРИЛ <b>↗</b></button>
-          <a href="#work" class="hero-scroll">РАБОТЫ <b>↓</b></a>
+          <a href="#work" class="hero-scroll">ИЗБРАННЫЕ РАБОТЫ <b>↓</b></a>
         </div>
       </div>
-      <div class="reveal-label" aria-hidden="true">MOVE TO REVEAL COLOR</div>
+      <div class="reveal-label" aria-hidden="true">НАВЕДИТЕ, ЧТОБЫ ПРОЯВИТЬ ЦВЕТ</div>
     </section>
 
     <section class="intro section">
-      <span class="eyebrow reveal">01 / POSITIONING</span>
+      <span class="eyebrow reveal">01 / BURLOV</span>
       <div class="intro-grid">
-        <h2 class="reveal">От идеи<br>до финального<br>кадра.</h2>
+        <h2 class="reveal kinetic-title">Контент<br>с ясной<br>задачей.</h2>
         <div class="intro-copy reveal">
-          <p>Беру на себя весь производственный процесс: концепцию, организацию, монтаж и выпуск готового контента.</p>
-          <div class="intro-facts"><span>5+ YEARS</span><span>FULL CYCLE</span><span>AI WORKFLOW</span></div>
+          <p><strong>BURLOV</strong> — студия креативного продюсирования. Создаём визуальные проекты для брендов, бизнеса и артистов — от идеи до финального релиза.</p>
+          <div class="intro-facts"><span>5+ ЛЕТ</span><span>ПОЛНЫЙ ЦИКЛ</span><span>AI-ТЕХНОЛОГИИ</span></div>
         </div>
       </div>
     </section>
 
     <section class="work section" id="work">
       <div class="section-heading reveal">
-        <span class="eyebrow">02 / SELECTED WORK</span>
-        <h2>Избранные<br>работы.</h2>
-        <p>Нажмите на обложку, чтобы открыть видео.</p>
+        <span class="eyebrow">02 / РАБОТЫ</span>
+        <h2 class="kinetic-title">Избранные<br>работы.</h2>
+        <p>Четыре формата. Один системный подход.</p>
       </div>
 
       <div class="project-layout">
         <article class="project project-a reveal">
-          <button class="project-cover open-video" data-video="assets/videos/music-video.mp4" data-title="Music Video" aria-label="Открыть Music Video">
+          <button class="project-cover open-video" data-video="assets/videos/music-video.mp4" data-title="Музыкальное видео" aria-label="Открыть Музыкальное видео">
             <img src="assets/posters/music-video.jpg" alt="Обложка музыкального видео">
             <span class="project-number">01</span>
-            <span class="project-action">PLAY ↗</span>
+            <span class="project-action">СМОТРЕТЬ ↗</span>
           </button>
-          <div class="project-meta"><h3>Music Video</h3><p>Production / Editing</p></div>
+          <div class="project-meta"><div><small>01 / 2025</small><h3>Музыкальное видео</h3><em>Визуальная история, собранная от замысла до финального мастера.</em></div><p>Режиссура<br>Продюсирование<br>Монтаж</p></div>
         </article>
 
         <article class="project project-b reveal">
-          <button class="project-cover open-video" data-video="assets/videos/ai-content.mp4" data-title="AI Content" aria-label="Открыть AI Content">
+          <button class="project-cover open-video" data-video="assets/videos/ai-content.mp4" data-title="AI-контент" aria-label="Открыть AI-контент">
             <img src="assets/posters/ai-content.jpg" alt="Обложка AI-контента">
             <span class="project-number">02</span>
-            <span class="project-action">PLAY ↗</span>
+            <span class="project-action">СМОТРЕТЬ ↗</span>
           </button>
-          <div class="project-meta"><h3>AI Content</h3><p>AI Production / 9:16</p></div>
+          <div class="project-meta"><div><small>02 / 2026</small><h3>AI-контент</h3><em>Генеративное производство для быстрых и выразительных форматов.</em></div><p>AI-продакшн<br>Генерация визуала<br>9:16</p></div>
         </article>
 
         <article class="project project-c reveal">
           <button class="project-cover open-video" data-video="assets/videos/reels.mp4" data-title="Reels / Shorts" aria-label="Открыть Reels / Shorts">
             <img src="assets/posters/reels.jpg" alt="Обложка короткого ролика">
             <span class="project-number">03</span>
-            <span class="project-action">PLAY ↗</span>
+            <span class="project-action">СМОТРЕТЬ ↗</span>
           </button>
-          <div class="project-meta"><h3>Reels / Shorts</h3><p>Editing / Social Media</p></div>
+          <div class="project-meta"><div><small>03 / 2026</small><h3>Reels / Shorts</h3><em>Короткий формат с точным ритмом и удержанием внимания.</em></div><p>Монтаж<br>Социальные сети<br>Вертикальный формат</p></div>
         </article>
 
         <article class="project project-d reveal">
-          <button class="project-cover open-video" data-video="assets/videos/billboard.mp4" data-title="Digital Billboard" aria-label="Открыть Digital Billboard">
+          <button class="project-cover open-video" data-video="assets/videos/billboard.mp4" data-title="Digital-билборд" aria-label="Открыть Digital-билборд">
             <img src="assets/posters/billboard.jpg" alt="Обложка ролика для билборда">
             <span class="project-number">04</span>
-            <span class="project-action">PLAY ↗</span>
+            <span class="project-action">СМОТРЕТЬ ↗</span>
           </button>
-          <div class="project-meta"><h3>Digital Billboard</h3><p>Motion / DOOH</p></div>
+          <div class="project-meta"><div><small>04 / 2026</small><h3>Digital-билборд</h3><em>Визуальное сообщение, адаптированное под масштаб городского экрана.</em></div><p>Motion-дизайн<br>DOOH<br>Адаптация</p></div>
         </article>
       </div>
     </section>
 
     <section class="services section">
-      <span class="eyebrow reveal">03 / EXPERTISE</span>
+      <span class="eyebrow reveal">03 / УСЛУГИ</span>
       <div class="services-list">
         <div class="service reveal"><span>01</span><h3>Монтаж видео</h3><i>Структура, ритм, звук и финальная сборка.</i></div>
         <div class="service reveal"><span>02</span><h3>Полный цикл продюсирования</h3><i>От концепции до готового продукта.</i></div>
@@ -243,35 +130,34 @@
 
     <section class="global-map section" id="map">
       <div class="map-heading reveal">
-        <span class="eyebrow">04 / WORLDWIDE</span>
-        <h2>География<br>проектов.</h2>
-        <p>Наведи курсор на страну, чтобы увидеть историю сотрудничества.</p>
+        <span class="eyebrow">04 / ГЕОГРАФИЯ</span>
+        <h2 class="kinetic-title">География<br>проектов.</h2>
+        <p>Проекты и производство в разных странах — от съёмки до постпродакшна.</p>
       </div>
 
       <div class="map-experience reveal">
         <aside class="map-story" aria-live="polite">
           <div class="map-story-top">
             <span class="map-index">01</span>
-            <span class="map-status"><i></i> ACTIVE GEOGRAPHY</span>
+            <span class="map-status"><i></i> ГЕОГРАФИЯ РАБОТЫ</span>
           </div>
           <div class="map-story-content">
             <p class="map-country-code">RUS / 2021—NOW</p>
             <h3 class="map-country-title">Россия</h3>
-            <p class="map-country-description">Коммерческие, общественные и государственные проекты: от производства вертикального контента до полного цикла видеопродюсирования.</p>
-            <div class="map-country-tags"><span>PRODUCTION</span><span>EDITING</span><span>AI CONTENT</span></div>
+            <p class="map-country-description">Музыкальные клипы, коммерческие проекты и digital-контент — от идеи до финального выпуска.</p>
+            <div class="map-country-tags"><span>ПРОДЮСИРОВАНИЕ</span><span>МОНТАЖ</span><span>DIGITAL</span></div>
           </div>
           <div class="map-country-list" role="tablist" aria-label="Страны сотрудничества">
             <button class="map-country-button active" data-country="RUS">Россия <b>01</b></button>
             <button class="map-country-button" data-country="ARE">ОАЭ <b>02</b></button>
             <button class="map-country-button" data-country="USA">США <b>03</b></button>
-            <button class="map-country-button" data-country="UKR">Украина <b>04</b></button>
-            <button class="map-country-button" data-country="BLR">Беларусь <b>05</b></button>
-            <button class="map-country-button" data-country="KAZ">Казахстан <b>06</b></button>
-            <button class="map-country-button" data-country="JPN">Япония <b>07</b></button>
-            <button class="map-country-button" data-country="CHN">Китай <b>08</b></button>
-            <button class="map-country-button" data-country="POL">Польша <b>09</b></button>
-            <button class="map-country-button" data-country="DEU">Германия <b>10</b></button>
-            <button class="map-country-button" data-country="FRA">Франция <b>11</b></button>
+            <button class="map-country-button" data-country="GEO">Грузия <b>04</b></button>
+            <button class="map-country-button" data-country="KAZ">Казахстан <b>05</b></button>
+            <button class="map-country-button" data-country="BLR">Беларусь <b>06</b></button>
+            <button class="map-country-button" data-country="CHN">Китай <b>07</b></button>
+            <button class="map-country-button" data-country="JPN">Япония <b>08</b></button>
+            <button class="map-country-button" data-country="DEU">Германия <b>09</b></button>
+            <button class="map-country-button" data-country="POL">Польша <b>10</b></button>
           </div>
         </aside>
 
@@ -293,7 +179,7 @@
               <line data-route="FRA" x1="650" y1="120" x2="495" y2="145"/>
             </g>
           </svg>
-          <div class="map-stats"><div><strong>11</strong><span>COUNTRIES</span></div><div><strong>100+</strong><span>PROJECTS</span></div><div><strong>5+</strong><span>YEARS</span></div></div>
+          <div class="map-stats"><div><strong>10</strong><span>СТРАН</span></div><div><strong>100+</strong><span>ПРОЕКТОВ</span></div><div><strong>5+</strong><span>ЛЕТ</span></div></div>
           <div class="map-tooltip" aria-hidden="true"><span></span></div>
           <div class="map-coordinates"><span>55.7558° N</span><span>37.6173° E</span></div>
           <div class="map-legend"><i></i><span>PROJECT LOCATION</span></div>
@@ -302,9 +188,9 @@
     </section>
 
     <section class="about section" id="about">
-      <span class="eyebrow reveal">05 / ABOUT</span>
+      <span class="eyebrow reveal">05 / ОБО МНЕ</span>
       <div class="about-layout">
-        <h2 class="reveal about-title"><span>Более пяти лет</span><span>в&nbsp;производстве</span><span>контента.</span></h2>
+        <h2 class="reveal about-title kinetic-title"><span>Более пяти лет</span><span>в&nbsp;производстве</span><span>контента.</span></h2>
         <div class="about-copy reveal">
           <p>Работаю с бизнесом, государственными и общественными организациями.</p>
           <p>Ответственно подхожу к срокам, погружаюсь в задачу и использую актуальные технологии производства.</p>
@@ -313,16 +199,16 @@
     </section>
 
     <section class="contact section" id="contact">
-      <span class="eyebrow reveal">06 / CONTACT</span>
-      <h2 class="reveal">Есть идея?<br><em>Давайте обсудим.</em></h2>
+      <span class="eyebrow reveal">06 / КОНТАКТЫ</span>
+      <h2 class="reveal kinetic-title">Есть идея?<br><em>Давайте обсудим.</em></h2>
       <div class="contact-links reveal">
-        <a href="https://t.me/alexeykykyshkiin" target="_blank" rel="noreferrer"><small>TELEGRAM</small><span>@alexeykykyshkiin</span><b>↗</b></a>
+        <a href="https://t.me/burlovprod" target="_blank" rel="noreferrer"><small>TELEGRAM</small><span>@burlovprod</span><b>↗</b></a>
         <a href="mailto:alexeyxtype.commercial@gmail.com"><small>EMAIL</small><span>alexeyxtype.commercial@gmail.com</span><b>↗</b></a>
       </div>
     </section>
   </main>
 
-  <footer><span>© 2026 АЛЕКСЕИЧ</span><span>VIDEO PRODUCER</span><a href="#top">BACK TO TOP ↑</a></footer>
+  <footer><span>© 2026 BURLOV</span><span>КРЕАТИВНОЕ ПРОДЮСИРОВАНИЕ · ВИДЕОПРОИЗВОДСТВО · AI-КОНТЕНТ</span><a href="#top">НАВЕРХ ↑</a></footer>
 
   <div class="video-modal" aria-hidden="true">
     <div class="modal-backdrop"></div>
