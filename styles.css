@@ -937,3 +937,189 @@ body.is-section-transitioning{overflow:hidden}
 .brand-lockup{font-size:18px!important;letter-spacing:.105em!important}
 @media(max-width:900px){.brand-lockup{font-size:17px!important}}
 @media(max-width:560px){.brand-lockup{font-size:16px!important}}
+
+/* =========================================================
+   BURLOV 1.1 — Neue Montreal unified wordmark
+   Licensed font file expected at:
+   assets/fonts/NeueMontreal-Medium.woff2
+   ========================================================= */
+@font-face{
+  font-family:"Neue Montreal";
+  src:
+    local("Neue Montreal Medium"),
+    local("NeueMontreal-Medium"),
+    url("assets/fonts/NeueMontreal-Medium.woff2") format("woff2");
+  font-style:normal;
+  font-weight:500;
+  font-display:swap;
+}
+
+:root{
+  --burlov-wordmark:"Neue Montreal","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+/* One wordmark across preloader, hero and header */
+.logo,
+.logo-word,
+.brand-lockup,
+.brand-word,
+.brand-outline,
+.brand-transition span,
+.minimal-loader-brand,
+.morph-brand,
+.morph-brand span{
+  font-family:var(--burlov-wordmark)!important;
+  font-weight:500!important;
+  font-style:normal!important;
+  font-stretch:normal!important;
+  text-transform:uppercase;
+  font-synthesis:none;
+}
+
+/* Header wordmark */
+.logo,
+.brand-lockup,
+.logo-word{
+  font-size:30px!important;
+  line-height:.82!important;
+  letter-spacing:.02em!important;
+}
+
+/* Hero / morphing wordmark */
+.brand-word,
+.brand-outline,
+.morph-brand,
+.morph-brand span{
+  letter-spacing:-.035em!important;
+}
+
+/* Preloader uses exactly the same typeface and weight */
+.minimal-loader-brand{
+  font-weight:500!important;
+  letter-spacing:.02em!important;
+}
+
+/* Keep the signature secondary and quiet */
+.morph-brand small{
+  font-family:Inter,Arial,sans-serif!important;
+  font-weight:500!important;
+}
+
+@media(max-width:900px){
+  .logo,.brand-lockup,.logo-word{font-size:26px!important}
+}
+@media(max-width:560px){
+  .logo,.brand-lockup,.logo-word{font-size:24px!important}
+}
+
+
+/* BURLOV 1.1.1 — compact signature under the live wordmark */
+.morph-brand small{display:none!important}
+.brand-signature{
+  position:fixed;
+  z-index:49;
+  left:0;top:0;
+  width:max-content;
+  pointer-events:none;
+  color:#f2f2ee;
+  font-family:Inter,Arial,sans-serif;
+  font-size:clamp(8px,.58vw,11px);
+  font-weight:500;
+  line-height:1;
+  letter-spacing:.22em;
+  text-transform:uppercase;
+  opacity:0;
+  transform:translateY(5px);
+  transition:opacity .26s ease,transform .34s var(--ease-cinema);
+  will-change:left,top,opacity,transform;
+}
+.brand-signature.is-visible{opacity:.72;transform:translateY(0)}
+@media(max-width:560px){.brand-signature{font-size:7px;letter-spacing:.18em}}
+
+/* BURLOV 1.1.4 — manifesto line control and compact mixed-format showcase */
+.intro-manifest{display:flex;flex-direction:column;align-items:flex-start}
+.intro-manifest>span{display:block}
+.intro-final-line{white-space:nowrap}
+
+/* Keep all work visible in its native orientation while grouping the set tightly. */
+.work .project-layout{
+  display:grid;
+  grid-template-columns:repeat(12,minmax(0,1fr));
+  gap:clamp(54px,6vw,96px) clamp(24px,3vw,52px);
+  max-width:1480px;
+  margin:0 auto;
+  align-items:start;
+}
+.work .project{
+  display:flex;
+  flex-direction:column;
+  gap:clamp(16px,1.5vw,24px);
+  margin:0;
+  min-width:0;
+}
+.work .project-a{grid-column:1 / span 8;grid-row:1}
+.work .project-b{grid-column:10 / span 3;grid-row:1;align-self:end}
+.work .project-c{grid-column:1 / span 3;grid-row:2}
+.work .project-d{grid-column:5 / span 8;grid-row:2;align-self:start}
+.work .project:nth-child(even){display:flex;grid-template-columns:none}
+.work .project:nth-child(even) .project-cover,
+.work .project:nth-child(even) .project-meta{grid-column:auto;grid-row:auto}
+.work .project-cover{
+  width:100%;
+  height:auto;
+  background:#080808;
+}
+.work .project-four-three .project-cover{aspect-ratio:4/3}
+.work .project-sixteen-nine .project-cover{aspect-ratio:16/9}
+.work .project-vertical .project-cover{aspect-ratio:9/16}
+.work .project-cover img{
+  width:100%;height:100%;object-fit:cover;object-position:center;
+}
+.work .project-meta{
+  position:static;
+  order:0;
+  display:grid;
+  grid-template-columns:minmax(0,1fr) auto;
+  gap:8px 20px;
+  width:100%;
+  margin:0;
+  padding:0;
+}
+.work .project-meta>div{min-width:0}
+.work .project-meta small{margin-bottom:11px}
+.work .project-meta h3{font-size:clamp(25px,2.25vw,40px);line-height:1;margin:0 0 12px}
+.work .project-meta em{font-size:clamp(12px,.95vw,15px);line-height:1.5;margin:0;max-width:430px}
+.work .project-meta p{font-size:8px;line-height:1.75;text-align:right;white-space:nowrap;margin:0}
+
+@media(max-width:900px){
+  .intro-final-line{white-space:normal}
+  .work .project-layout{grid-template-columns:repeat(2,minmax(0,1fr));gap:72px 24px}
+  .work .project-a,.work .project-d{grid-column:1/-1;grid-row:auto}
+  .work .project-b,.work .project-c{grid-column:auto;grid-row:auto;width:min(100%,360px);justify-self:center}
+  .work .project-meta{display:grid;grid-template-columns:1fr auto;gap:8px 16px}
+  .work .project-meta em{grid-column:1/-1}
+  .work .project-meta p{grid-column:2;grid-row:1/3}
+}
+@media(max-width:560px){
+  .intro-manifest{font-size:clamp(16px,4.7vw,20px);line-height:1.55}
+  .work .project-layout{grid-template-columns:1fr;gap:72px}
+  .work .project-a,.work .project-b,.work .project-c,.work .project-d{grid-column:1;grid-row:auto;width:100%;justify-self:stretch}
+  .work .project-vertical{width:min(74vw,330px);justify-self:center}
+  .work .project-meta{display:block}
+  .work .project-meta h3{font-size:clamp(28px,9vw,42px)}
+  .work .project-meta p{text-align:left;white-space:normal;margin-top:15px}
+}
+
+
+/* BURLOV 1.1.6 — exact four-line manifesto composition */
+@media (min-width:901px){
+  .intro-manifest{
+    font-size:clamp(18px,1.35vw,23px);
+    line-height:1.58;
+    letter-spacing:-.025em;
+  }
+  .intro-manifest>span{white-space:nowrap;}
+}
+@media (max-width:900px){
+  .intro-manifest>span,.intro-final-line{white-space:normal;}
+}

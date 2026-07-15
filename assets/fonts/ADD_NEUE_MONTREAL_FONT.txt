@@ -1,0 +1,11 @@
+Place your licensed font file here with this exact filename:
+
+NeueMontreal-Medium.woff2
+
+The website is already configured to use it for the BURLOV wordmark in:
+- preloader
+- hero
+- fixed header logo
+- brand transition
+
+Do not rename the file unless you also update the @font-face URL in styles.css.

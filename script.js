@@ -235,6 +235,7 @@ if(matchMedia('(pointer:fine)').matches&&!matchMedia('(prefers-reduced-motion: r
   const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
   const morph = document.querySelector('#morphBrand');
   const source = document.querySelector('.brand-source');
+  const signature = document.querySelector('#brandSignature');
   const target = document.querySelector('.brand-target');
   const hero = document.querySelector('.hero');
   const media = document.querySelector('.hero-media');
@@ -266,6 +267,15 @@ if(matchMedia('(pointer:fine)').matches&&!matchMedia('(prefers-reduced-motion: r
     const x=sx+(ex-sx)*p;
     const y=sy+(ey-sy)*p;
     morph.style.transform=`translate3d(${x}px,${y}px,0) scale(${scale})`;
+    if(signature){
+      const r=morph.getBoundingClientRect();
+      // Neue Montreal has a visible left sidebearing on the capital B.
+      // Offset the signature to the actual painted edge of the glyph,
+      // rather than the technical border box of the wordmark.
+      const opticalInset = r.height * 0.055;
+      signature.style.left=`${r.left + opticalInset}px`;
+      signature.style.top=`${r.bottom + (innerWidth<560?7:10)}px`;
+    }
     morph.style.setProperty('--brand-progress',p);
 
     // Dolly rather than obvious parallax.
@@ -287,8 +297,13 @@ if(matchMedia('(pointer:fine)').matches&&!matchMedia('(prefers-reduced-motion: r
   let signatureTimer=0;
   morph.addEventListener('dblclick',()=>{
     clearTimeout(signatureTimer);
-    morph.classList.add('show-signature');
-    signatureTimer=setTimeout(()=>morph.classList.remove('show-signature'),3000);
+    if(!signature)return;
+    signature.classList.add('is-visible');
+    signature.setAttribute('aria-hidden','false');
+    signatureTimer=setTimeout(()=>{
+      signature.classList.remove('is-visible');
+      signature.setAttribute('aria-hidden','true');
+    },3000);
   });
 
   // A restrained magnetic pull — only on fine pointers.
